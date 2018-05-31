@@ -60,6 +60,7 @@ namespace LandlordsApiTest.TestApis
             //compare the get value to the posted value
             foreach (var variable in MethodsAndProperties.ResponseBodyFromGets)
             {
+               // here is a important, add the geted id and store it into MethodsAndProperties.Id for further use.
                 Assert.AreEqual(body.firstName, variable.firstName);
                 Assert.AreEqual(body.lastName, variable.lastName);
                 Console.WriteLine("Get Id:  "+id);
