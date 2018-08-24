@@ -17,7 +17,8 @@ namespace LandlordsApiTest.publicMethodsAndPerporities
         public static string HeaderKey = null;
         public static string HeaderValue = null;
 
-        public static Body body=new Body()
+        //定义好传输的主体
+        public static Body body = new Body()
         {
             firstName = "morgan" + GenerateRandomString(),
             lastName = "morgan" + GenerateRandomString(),
@@ -26,7 +27,7 @@ namespace LandlordsApiTest.publicMethodsAndPerporities
 
 
         /// <summary>
-        /// 
+        /// 序列化将json 转成string
         /// </summary>
         /// <param name="body"></param>
         /// <returns></returns>
@@ -52,9 +53,9 @@ namespace LandlordsApiTest.publicMethodsAndPerporities
 
             return randomString;
         }
+
         public class Body
         {
-
             public string firstName { get; set; }
             public string lastName { get; set; }
             public bool trusted { get; set; }
@@ -78,12 +79,13 @@ namespace LandlordsApiTest.publicMethodsAndPerporities
             public bool trusted { get; set; }
             public string[] apartments { get; set; }
         }
-   
+
 
         public class PutMessage
         {
             public string message { get; set; }
         }
+
         public class DeleteMessage
         {
             public string message { get; set; }
